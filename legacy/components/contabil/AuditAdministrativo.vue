@@ -2,6 +2,7 @@
   <div class="row">
     <div class="col-12 q-mt-md">
       {{ $t('Nenhum item por enquanto.') }}
+      <!-- {{ $translate('accounting', 'title', 'menu') }} Begin Gaffo -->
     </div>
   </div>
 </template>
