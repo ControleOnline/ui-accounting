@@ -27,9 +27,7 @@ export default {
       myCompany: "people/currentCompany",
     }),
 
-    user() {
-      return this.$store.getters["auth/user"];
-    },
+
   },
 
   watch: {
