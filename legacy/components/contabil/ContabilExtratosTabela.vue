@@ -77,13 +77,10 @@ export default {
   },
 
   computed: {
-    ...mapGetters({
-      myCompany: 'people/currentCompany',
+        ...mapGetters({
+      myCompany: "people/currentCompany",
+      user: "auth/user",
     }),
-
-    user() {
-      return this.$store.getters['auth/user'];
-    },
   },
 
   watch: {

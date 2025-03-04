@@ -1,21 +1,21 @@
 <template>
   <div class="row">
     <div class="col-12 q-mt-md">
-      {{ $t('Nenhum item por enquanto.') }}
+      {{ $t("Nenhum item por enquanto.") }}
       <!-- {{ $tt('accounting', 'menu', 'title') }} Begin Gaffo -->
     </div>
   </div>
 </template>
 
 <script>
-import { mapGetters } from 'vuex';
+import { mapGetters } from "vuex";
 
 export default {
   data() {
     return {
-      items   : [],
-      saving  : false,
-      loading : false,
+      items: [],
+      saving: false,
+      loading: false,
     };
   },
 
@@ -25,12 +25,9 @@ export default {
 
   computed: {
     ...mapGetters({
-      myCompany: 'people/currentCompany',
+      myCompany: "people/currentCompany",
+      user: "auth/user",
     }),
-
-    user() {
-      return this.$store.getters['auth/user'];
-    },
   },
 
   watch: {
@@ -42,7 +39,7 @@ export default {
   methods: {
     onRequest() {
       let params = {};
-      let items  = [];
+      let items = [];
 
       this.items = items;
     },
