@@ -30,6 +30,7 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex';
 import DeptoAdministrativoTabela from '../../../components/depto/DeptoAdministrativoTabela';
 
 export default {
@@ -38,19 +39,15 @@ export default {
   },
 
   computed: {
-    user() {
-      return this.$store.getters['auth/user'] || {};
-    },
+    ...mapGetters({
+      user: "auth/user",
+    }),
   },
 
-  data () {
-    return {
-
-    }
+  data() {
+    return {};
   },
 
-  methods: {
-
-  },
-}
+  methods: {},
+};
 </script>

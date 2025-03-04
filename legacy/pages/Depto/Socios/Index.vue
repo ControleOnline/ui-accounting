@@ -1,22 +1,6 @@
-<template>
-  <q-page padding>
-    <q-card style="min-height: 90vh;">
-      <q-card-section>
-        <div class="row">
-          <div class="col-12 q-mb-md text-h6 text-left">
-            {{ $t('Depto Sócios') }}
-          </div>
-        </div>
-      </q-card-section>
-
-      <DeptoSociosTabela />
-
-    </q-card>
-  </q-page>
-</template>
-
 <script>
 import DeptoSociosTabela from '../../../components/depto/DeptoSociosTabela';
+import { mapGetters } from 'vuex';
 
 export default {
   components: {
@@ -24,9 +8,9 @@ export default {
   },
 
   computed: {
-    user() {
-      return this.$store.getters['auth/user'] || {};
-    },
+    ...mapGetters({
+      user: 'auth/user',
+    }),
   },
 
   data () {

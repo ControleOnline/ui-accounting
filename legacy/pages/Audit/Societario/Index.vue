@@ -34,6 +34,7 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex';
 import AuditSocietario from '../../../components/societario/AuditSocietario';
 
 export default {
@@ -42,19 +43,17 @@ export default {
   },
 
   computed: {
-    user() {
-      return this.$store.getters['auth/user'] || {};
-    },
+    ...mapGetters({
+      user: "auth/user",
+    }),
   },
 
-  data () {
+  data() {
     return {
       currentTab: 'societario',
-    }
+    };
   },
 
-  methods: {
-
-  },
-}
+  methods: {},
+};
 </script>

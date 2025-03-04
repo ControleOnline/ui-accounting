@@ -1,21 +1,6 @@
-<template>
-  <q-page padding>
-    <div class="row">
-      <div class="col-12">
-        <q-card style="min-height: 90vh;">
-          <q-card-section>
-            <MensagensTabela
-              :id="id"
-            />
-          </q-card-section>
-        </q-card>
-      </div>
-    </div>
-  </q-page>
-</template>
-
 <script>
- import MensagensTabela from '../../components/societario/MensagensTabela';
+import MensagensTabela from '../../components/societario/MensagensTabela';
+import { mapGetters } from 'vuex';
 
 export default {
   components: {
@@ -29,9 +14,9 @@ export default {
   },
 
   computed: {
-    user() {
-      return this.$store.getters['auth/user'] || {};
-    },
+    ...mapGetters({
+      user: 'auth/user',
+    }),
   },
 
   data () {
