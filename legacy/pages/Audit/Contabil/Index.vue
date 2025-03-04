@@ -58,6 +58,7 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex';
 import AuditAdministrativo from '../../../components/contabil/AuditAdministrativo';
 import AuditDeclaracoes from '../../../components/contabil/AuditDeclaracoes';
 import AuditExtratos from '../../../components/contabil/AuditExtratos';
@@ -65,26 +66,24 @@ import AuditImpostos from '../../../components/contabil/AuditImpostos';
 
 export default {
   components: {
-    AuditImpostos      ,
-    AuditDeclaracoes   ,
+    AuditImpostos,
+    AuditDeclaracoes,
     AuditAdministrativo,
-    AuditExtratos      ,
+    AuditExtratos,
   },
 
   computed: {
-    user() {
-      return this.$store.getters['auth/user'] || {};
-    },
+    ...mapGetters({
+      user: "auth/user",
+    }),
   },
 
-  data () {
+  data() {
     return {
       currentTab: 'impostos',
-    }
+    };
   },
 
-  methods: {
-
-  },
-}
+  methods: {},
+};
 </script>

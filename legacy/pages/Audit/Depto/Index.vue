@@ -82,6 +82,7 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex';
 import AuditAdministrativo from '../../../components/depto/AuditAdministrativo';
 import AuditDeclaracoes from '../../../components/depto/AuditDeclaracoes';
 import AuditExtratos from '../../../components/depto/AuditExtratos';
@@ -92,29 +93,27 @@ import AuditProLabore from '../../../components/depto/AuditProLabore';
 
 export default {
   components: {
-    AuditImpostos      ,
-    AuditDeclaracoes   ,
+    AuditImpostos,
+    AuditDeclaracoes,
     AuditAdministrativo,
-    AuditExtratos      ,
+    AuditExtratos,
     AuditFolhaPagamento,
-    AuditFolhaPonto    ,
-    AuditProLabore     ,
+    AuditFolhaPonto,
+    AuditProLabore,
   },
 
   computed: {
-    user() {
-      return this.$store.getters['auth/user'] || {};
-    },
+    ...mapGetters({
+      user: "auth/user",
+    }),
   },
 
-  data () {
+  data() {
     return {
       currentTab: 'impostos',
-    }
+    };
   },
 
-  methods: {
-
-  },
-}
+  methods: {},
+};
 </script>

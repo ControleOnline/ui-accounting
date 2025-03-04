@@ -23,25 +23,26 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex';
 import DocsTable from '@controleonline/ui-legacy/ui-docs/src/components/docs/DocsTable';
 
-export default { //
+export default {
   components: {
     DocsTable,
   },
 
   computed: {
-    user() {
-      return this.$store.getters['auth/user'] || {};
-    },
+    ...mapGetters({
+      user: "auth/user",
+    }),
   },
 
   data() {
     return {
-      docs_type: 'audit-fiscal'
-    }
+      docs_type: 'audit-fiscal',
+    };
   },
 
   methods: {},
-}
+};
 </script>

@@ -15,7 +15,8 @@
 </template>
 
 <script>
- import HistoricoTabela from '../../../components/depto/HistoricoTabela';
+import { mapGetters } from 'vuex';
+import HistoricoTabela from '../../../components/depto/HistoricoTabela';
 
 export default {
   components: {
@@ -29,19 +30,17 @@ export default {
   },
 
   computed: {
-    user() {
-      return this.$store.getters['auth/user'] || {};
-    },
+    ...mapGetters({
+      user: "auth/user",
+    }),
   },
 
-  data () {
+  data() {
     return {
       id: null,
-    }
+    };
   },
 
-  methods: {
-
-  },
-}
+  methods: {},
+};
 </script>
