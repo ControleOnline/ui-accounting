@@ -15,7 +15,7 @@
   </q-page>
 </template>
 <script>
-import FormImposto from '@controleonline/ui-legacy/ui-docs/src/components/docs/Form';
+import FormImposto from '@controleonline/ui-legacy/ui-docs/src/vue/components/docs/Form';
 
 export default { //
   components: {

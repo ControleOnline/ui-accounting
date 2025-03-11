@@ -24,7 +24,7 @@
 
 <script>
 import { mapGetters } from 'vuex';
-import DocsTable from '@controleonline/ui-legacy/ui-docs/src/components/docs/DocsTable';
+import DocsTable from '@controleonline/ui-legacy/ui-docs/src/vue/components/docs/DocsTable';
 
 export default {
   components: {
