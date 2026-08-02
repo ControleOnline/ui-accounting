@@ -1,11 +1,5 @@
-## Escopo
-- Modulo de contabilidade, fiscal e rotinas administrativas relacionadas.
-- A implementacao encontrada aqui hoje esta em Vue legado.
+# ui-accounting
 
-## Estado
-- Este modulo hoje nao tem `src/react`; a implementacao disponivel fica em `src/vue`.
-- Em novos prompts, priorizar modulos React equivalentes quando existirem.
-- So mexer em `src/vue` se o pedido for explicitamente sobre este fluxo ou se nao houver alternativa atual.
+## Qualidade de código
 
-## Quando usar
-- Prompts sobre contabil, fiscal, pro-labore, impostos, folha e telas administrativas antigas.
+- A barra comum de modularizacao, testes, smoke tests e limite de tamanho de componentes vive em `https://github.com/ControleOnline/agents-mcp/blob/master/skills/shared/code-quality.md`.
