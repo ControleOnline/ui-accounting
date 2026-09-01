@@ -12,6 +12,9 @@
   },
   "bugs": "",
   "homepage": "https://www.controleonline.com/devs/plugins",
+  "dependencies": {
+    "@controleonline/ui-common": "*"
+  },
   "browserslist": [
     "last 1 version, not dead, ie >= 11"
   ]
