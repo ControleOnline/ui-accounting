@@ -1,6 +1,6 @@
 {
   "name": "@controleonline/ui-accounting",
-  "version": "1.0.14",
+  "version": "1.0.15",
   "author": "ControleOnline",
   "description": "ControleOnline Accounting Quasar UI Component",
   "license": "MIT",
@@ -12,6 +12,9 @@
   },
   "bugs": "",
   "homepage": "https://www.controleonline.com/devs/plugins",
+  "dependencies": {
+    "@controleonline/ui-common": "*"
+  },
   "browserslist": [
     "last 1 version, not dead, ie >= 11"
   ]
