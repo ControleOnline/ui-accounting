@@ -17,10 +17,14 @@ export default function CteFiscalConfig({company, companyId, navigation}) {
       route={{
         params: {
           providerKey: 'receita-federal',
+          fiscalTab: 'cte',
+          onlyFiscalTab: true,
           companyId: resolvedCompanyId,
           clientId: resolvedCompanyId,
         },
       }}
+      fiscalTab="cte"
+      onlyFiscalTab
       embedded
     />
   );
