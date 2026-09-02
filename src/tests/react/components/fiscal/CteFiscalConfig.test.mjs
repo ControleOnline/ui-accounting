@@ -6,6 +6,10 @@ const source = fs.readFileSync(
   new URL('../../../../react/components/fiscal/CteFiscalConfig.js', import.meta.url),
   'utf8',
 );
+const readComponent = fileName => fs.readFileSync(
+  new URL(`../../../../react/components/fiscal/${fileName}`, import.meta.url),
+  'utf8',
+);
 
 test('CteFiscalConfig owns Receita Federal CT-e fiscal integration config', () => {
   assert.match(source, /IntegrationConfigPage/);
@@ -15,6 +19,14 @@ test('CteFiscalConfig owns Receita Federal CT-e fiscal integration config', () =
   assert.match(source, /embedded/);
   assert.match(source, /fiscalTab: 'cte'/);
   assert.match(source, /onlyFiscalTab: true/);
+});
+
+test('FiscalCompanyConfig exposes all Receita Federal tabs for company details', () => {
+  const source = readComponent('FiscalCompanyConfig.js');
+  assert.match(source, /providerKey: 'receita-federal'/);
+  assert.match(source, /embedded/);
+  assert.doesNotMatch(source, /onlyFiscalTab/);
+  assert.doesNotMatch(source, /fiscalTab:/);
 });
 
 test('each fiscal configuration entry has its own component file', () => {
