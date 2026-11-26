@@ -1,0 +1,20 @@
+{
+  "version": "1.0.20",
+  "rc": 1,
+  "branch": "rc/1.0.20-rc.1",
+  "baseMaster": "9f7feb213ca1a8456a2f8a8e52a25eb04ca43ea1",
+  "baseTag": "v1.0.19",
+  "tasks": [
+    1761
+  ],
+  "taskRepository": "ControleOnline/app-community",
+  "frozen": true,
+  "repositories": {
+    "ControleOnline/ui-accounting": "849371546db64a31935015ebae839ddefdea13a6"
+  },
+  "sources": {
+    "versão de produção v1.0.19": "6147e01a13dc4a22077b47eb18b6b485d5abaae7",
+    "staging": "e5cf71de3ff954613b31315bd5c71b1e5c0aa163",
+    "dev": "5aa079e8414cc50a0cacf178c44a0e2c51aaaf31"
+  }
+}
